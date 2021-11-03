@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parallax</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">World</a>
+            <div class="toggle"></div>
+        </header>
+        <img src="img/ds-background.jpg" class="bg">
+        <img src="img/ds-artorias.png" class="artorias">
+        <div class="content">
+            <h2>We can save <br><span>LONDOR</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#">Join Us</a>
+        </div>
+        <ul class="social-icons">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+        </ul>
+        <div class="textBlocks">
+            <div class="block">
+                <h3>Defenders of Dark Souls</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="block">
+                <h3>How to Git Gud</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+    document.addEventListener("mousemove",function(e){
+        const bg = document.querySelector('.bg');
+        const artorias = document.querySelector('.artorias');
+        const content = document.querySelector('.content');
+
+        bg.style.width = 100 + e.pageX/100 + '%';
+        bg.style.height = 100 + e.pageX/100 + '%';
+        artorias.style.right =   e.pageX/2 + 'px';
+        content.style.left = 100 + e.pageX/2.5 + 'px';
+
+
+    })
+    </script>
+</body>
+
+</html>
